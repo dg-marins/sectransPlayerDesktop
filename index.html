@@ -1,0 +1,134 @@
+<html>
+ <head>
+  <title>
+   SecPlayer
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+ </head>
+ <body>
+  <div class="header">
+   <div class="title">
+    Monitoramento
+   </div>
+   <div class="user-info">
+    <img alt="User Avatar" height="30" src="https://storage.googleapis.com/a1aa/image/NxZWrzVeOLQIdKWHbRLWh5384aeXKtzHmTs5uolDeDxkNdbnA.jpg" width="30"/>
+    <span>
+     Douglas Marins
+    </span>
+   </div>
+  </div>
+  <div class="sidebar" id="sidebar">
+   <h2>
+    Abrir carro
+   </h2>
+   <label for="monitoring-type">
+    Tipo de monitoramento
+   </label>
+   <div id="monitoring-type">
+    <input id="carro" name="monitoring" type="radio" value="carro"/>
+    <label for="carro">
+     Carro
+    </label>
+    <input id="jornada" name="monitoring" type="radio" value="jornada"/>
+    <label for="jornada">
+     Jornada
+    </label>
+   </div>
+   <label for="carro-select">
+    Carro
+   </label>
+   <select id="carro-select">
+    <option value="9633">
+     9633
+    </option>
+   </select>
+   <label for="date">
+    Data
+   </label>
+   <input id="date" type="date" value="2024-10-11"/>
+   <button>
+    Fechar
+   </button>
+   <button onclick="">
+    Monitorar
+   </button>
+  </div>
+  <button class="toggle-sidebar" id="toggle-sidebar">
+   <i class="fas fa-bars">
+   </i>
+  </button>
+  <div class="main-content" id="main-content">
+   <div class="top-bar">
+    <div>
+     <span>
+      Início:
+     </span>
+     <span>
+      Término:
+     </span>
+    </div>
+    <div>
+     <span>
+      Carro:
+     </span>
+     <span>
+      Linha:
+     </span>
+    </div>
+    <div>
+     SECTRANS
+    </div>
+   </div>
+   <div class="video-grid">
+    <div class="video">
+      <video id="video1" width="100%" height="100%">
+        <source src="http://192.168.9.23:2223/relatorio/videos/9633/camera1/2024-10-11/20241011013626.mp4" type="video/mp4">
+        Seu navegador não suporta a reprodução de vídeos.
+      </video>
+    </div>
+    <div class="video">
+      <video id="video2" width="100%" height="100%">
+        <source src="http://192.168.9.23:2223/relatorio/videos/9633/camera2/2024-10-11/20241011013627.mp4" type="video/mp4">
+        Seu navegador não suporta a reprodução de vídeos.
+      </video>
+    </div>
+    <div class="video">
+      <video id="video3" width="100%" height="100%">
+        <source src="http://192.168.9.23:2223/relatorio/videos/9633/camera3/2024-10-11/20241011013626.mp4" type="video/mp4">
+        Seu navegador não suporta a reprodução de vídeos.
+      </video>
+    </div>
+    <div class="video">
+      <i class="fas fa-wifi"></i>
+    </div>
+  </div>
+    <div class="timeline">
+        <label for="timeline1">Câmera 1</label>
+        <input id="timeline1" type="range" min="0" max="100" value="50">
+        
+        <label for="timeline2">Câmera 2</label>
+        <input id="timeline2" type="range" min="0" max="100" value="50">
+        
+        <label for="timeline3">Câmera 3</label>
+        <input id="timeline3" type="range" min="0" max="100" value="50">
+    </div>
+   <div class="bottom-controls">
+    <i class="fas fa-backward">
+    </i>
+    <i class="fas fa-play">
+    </i>
+    <i class="fas fa-pause">
+    </i>
+    <i class="fas fa-forward">
+    </i>
+    <i class="fas fa-plus">
+    </i>
+    <i class="fas fa-minus">
+    </i>
+   </div>
+  </div>
+  <script type="module" src="module.js"></script>
+  <script src="script.js"></script>
+ </body>
+</html>
